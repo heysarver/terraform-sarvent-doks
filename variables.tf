@@ -41,3 +41,7 @@ variable "default_node_min_nodes" {
 variable "default_node_max_nodes" {
   default = "7"
 }
+
+variable "cluster_vpc_uuid" {
+  default = ""
+}

@@ -3,10 +3,12 @@ data "digitalocean_kubernetes_versions" "main" {
 }
 
 resource "digitalocean_kubernetes_cluster" "main" {
-  name = var.cluster_name
-  region = var.cluster_region
+  name         = var.cluster_name
+  region       = var.cluster_region
   auto_upgrade = var.cluster_auto_upgrade
   version      = data.digitalocean_kubernetes_versions.main.latest_version
+  vpc_uuid     = var.cluster_vpc_uuid != "" ? var.cluster_vpc_uuid : null
+
 
   maintenance_policy {
     start_time = var.cluster_mainentance_start_time
