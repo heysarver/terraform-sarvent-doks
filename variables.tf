@@ -23,7 +23,7 @@ variable "cluster_maintenance_day" {
 }
 
 variable "default_node_pool_name" {
-  default = "main"
+  default = "default"
 }
 
 variable "default_node_pool_size" {
