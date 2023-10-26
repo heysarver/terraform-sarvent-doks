@@ -45,3 +45,8 @@ variable "default_node_max_nodes" {
 variable "cluster_vpc_uuid" {
   default = ""
 }
+
+variable "argo_admin_password_bcrypt" {
+  default = ""
+  sensitive = true
+}
