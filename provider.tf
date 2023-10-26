@@ -17,7 +17,7 @@ terraform {
 
 locals {
   cluster_endpoint = digitalocean_kubernetes_cluster.main.endpoint
-  kube_config = digitalocean_kubernetes_cluster.main.kube_config[0]
+  kube_config = digitalocean_kubernetes_cluster.main.kube_config.0
 }
 
 provider "kubernetes" {
