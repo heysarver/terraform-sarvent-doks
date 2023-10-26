@@ -10,7 +10,7 @@ resource "helm_release" "argo" {
   ]
 
   values = [jsonencode({
-    configs.secret.argocdServerAdminPassword = var.argo_admin_password_bcrypt
+    "configs.secret.argocdServerAdminPassword" = var.argo_admin_password_bcrypt
   })]
 
   # set {
