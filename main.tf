@@ -23,3 +23,9 @@ resource "digitalocean_kubernetes_cluster" "main" {
     max_nodes  = var.default_node_max_nodes
   }
 }
+
+resource "kubernetes_namespace" "argocd" {
+  metadata {
+    name = "argocd"
+  }
+}
